@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Manufacturing";
+
+    /*
+     * To turn on prerendering, add this attribute to the react-app div:
+     * 
+     * asp-prerender-module="ClientApp/dist/main-server"
+     * 
+     * Note that there are issues with things like relative links that need to be resolved
+     * in order to use this capability.  Also pre-rendering may simply not work because the
+     * client UI must carry out specific logic before rendering the details.
+     */
+}
+
+<div id="react-app"><div style="width: 100vw; height: 100vh; overflow: hidden; position: fixed; background: #222" /></div>
+
+@section scripts {
+    <script src="~/dist/main-client.js" asp-append-version="true"></script>
+}
